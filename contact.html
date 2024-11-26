@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDK㋛</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylec.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+
+            <div class="iconDes"><img class="icon" src="style/icon.png" alt=""></div>
+            <div class="burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+
+
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="price.html">Сервис</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="about.html">Другое</a></li>
+                </ul>
+            </div>
+
+
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="price.html">Сервис</a>
+                <a href="contact.html">Контакты</a>
+                <a href="about.html">Другое</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main-fon"> <img src="style/fon-plashka.jpg" alt=""></div>
+
+    <main>
+        <div id="grid"></div>
+
+        <div class="container">
+            <div class="zagruska">
+                <div class="tochka1"></div>
+                <div class="tochka2"></div>
+                <div class="tochka3"></div>
+                <div class="tochka4"></div>
+                <div class="tochka5"></div>
+                <div class="tochka6"></div>
+            </div>
+            <div class="winGitHub"></div>
+            <div class="gitHub">
+                <div class="gName">
+                    <h1>GitHub</h1>
+                </div>
+                <div class="GKrest">✕</div>
+                <img src="" alt="">
+                <div class="info">
+                    <div class="logGit"></div>
+                    <div class="nameGit"></div>
+                    <div class="bioGit"></div>
+                </div>
+            </div>
+            <div class="name-fon">
+                <h1>CONTACT</h1>
+            </div>
+            <div class="levo-pols open">
+                <div class="svetofor">
+                    <div class="s1">
+                        <div class="ss1 openS"></div>
+                    </div>
+                    <div class="s2">
+                        <div class="ss2"></div>
+                    </div>
+                    <div class="s3">
+                        <div class="ss3"></div>
+                    </div>
+                </div>
+
+                <div class="form ">
+                    <form method="GET" id="regForm">
+
+                        <input type="text" id="name" name="name" class="openForm" placeholder="Имя">
+                        <input type="tel" id="phone" name="phone" class="" placeholder="Телефон">
+                        <input type="text" id="email" name="email" class="" placeholder="Почта">
+
+                        <div class="nameError"></div>
+                        <div class="phoneError"></div>
+                        <div class="emailError"></div>
+
+                        <input type="submit" id="submit" value="Отправить" />
+                    </form>
+                    <div class="pushka"><img src="style/Gun-Text1.png" alt=""></div>
+                    <div class="puvPuv">
+                    </div>
+                </div>
+            </div>
+            <div class="pravo-pols">
+                <div class="nicheNet">
+                    <h1>Тут могла бы быть ваша реклама?</h1>
+                    <p>нет</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="phones">
+
+            <img class="i4" src="style/i4.png" alt="">
+            <a href="tel:+79601427765" class="phone">+7(960)142-77-65</a>
+        </div>
+
+        <div class="stikMan">
+            <img class="stik" src="style/stikMan1.png" alt="">
+            <div class="hand"></div>
+        </div>
+
+        <div class="socials">
+            <a href="tg://resolve?domain=@m1fkaa"><img class="i1" src="style/i1.png" alt=""></a>
+            <img class="i2" src="style/i2.png" alt="">
+            <div class="ii3">
+                <img class="i3" src="style/k3er.png" alt="">
+            </div>
+            <div class="kerror">во вкладке сервис</div>
+
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        //форма
+        const mainForm = document.querySelector('form');
+        const input = document.querySelectorAll('input');
+        const nameForm = document.querySelector('#name');
+        const phoneForm = document.querySelector('#phone');
+        const emailForm = document.querySelector('#email');
+        const submitForm = document.querySelector('#submit');
+        const openForm = document.querySelector('.openForm');
+        const pushka = document.querySelector('.pushka');
+
+        let vvodInput;
+        let formValue;
+        const puvPuv = document.querySelector('.puvPuv');
+        let deleteF = false;
+        let numForm = 1;
+
+        //проверка, не нажата ли кл БакСпайс
+        mainForm.addEventListener('keydown', (e) => {
+            if (e.key == 'Backspace') {
+                deleteF = true
+            }
+            else {
+                deleteF = false
+            }
+        })
+
+
+        //анимация пушки при загрузке
+        pushka.classList.add('goP');
+        puvPuv.classList.add('goPp');
+        setTimeout(() => {
+            pushka.classList.remove('goP');
+            puvPuv.classList.remove('goPp');
+        }, 1000)
+
+
+        //работа формы
+        mainForm.addEventListener('input', () => {
+            let leftWindow = window.innerWidth / 2;//Середина окна
+            let cursorPosition;
+            let puvPuvCopy = puvPuv.cloneNode(true);//клон
+            let xPx = puvPuv.getBoundingClientRect().left;//позиция
+            let yPx = puvPuv.getBoundingClientRect().top;
+
+            if (numForm == 1) {
+
+                cursorPosition = nameForm.selectionStart;
+                formValue = nameForm.value;
+
+                vvodInput = formValue.slice(cursorPosition - 1, cursorPosition);//левый символ в инпуте относительно курсора
+                puvPuvCopy.style.left = xPx + 'px';
+                puvPuvCopy.style.top = yPx + 'px';//берерм позицию родителя
+            }
+            else if (numForm == 2) {
+
+                cursorPosition = phoneForm.selectionStart;
+                formValue = phoneForm.value;
+
+                vvodInput = formValue.slice(cursorPosition - 1, cursorPosition);
+                puvPuvCopy.style.left = xPx + 'px';
+                puvPuvCopy.style.top = yPx + 'px';
+            }
+            else if (numForm == 3) {
+
+                cursorPosition = emailForm.selectionStart;
+                formValue = emailForm.value;
+
+                vvodInput = formValue.slice(cursorPosition - 1, cursorPosition);
+                puvPuvCopy.style.left = xPx + 'px';
+                puvPuvCopy.style.top = yPx + 'px';
+            }
+
+            //условия анимации вылета букв
+            if (formValue != '') {
+                puvPuvCopy.innerHTML = vvodInput;
+            }
+            else {
+                puvPuvCopy.innerHTML = '';
+            }
+            if (deleteF) {
+                puvPuvCopy.innerHTML = '';
+            }
+            else {
+                setTimeout(() => {
+                    pushka.classList.add('pum');
+                }, 20)
+                pushka.classList.remove('pum');
+            }
+
+            puvPuvCopy.classList.add('puvPuvCopy')
+            document.body.append(puvPuvCopy)
+            let x = xPx;
+            let y = yPx;
+            let up = true;
+
+            //траектория буквы из пушки
+            setInterval(() => {
+
+                if (x <= (leftWindow - 20)) {
+                    x += leftWindow / 110;
+                }
+                if (x >= (leftWindow - 20)) {
+                    puvPuvCopy.remove();
+                }
+
+                if (y == (yPx - 140)) {
+                    up = false
+                }
+
+                if (up) {
+                    if (y >= (yPx - 55)) {
+                        y -= 5
+                    }
+                    else if (y >= (yPx - 90)) {
+                        y -= 4
+                    }
+                    else if (y >= (yPx - 115)) {
+                        y -= 3
+                    }
+                    else if (y >= (yPx - 130)) {
+                        y -= 2
+                    }
+                    else if (y >= (yPx - 140)) {
+                        y -= 1
+                    }
+                }
+
+                if (!up) {
+                    if (y <= (yPx - 130)) {
+                        y += 1
+                    }
+                    else if (y <= (yPx - 115)) {
+                        y += 2
+                    }
+                    else if (y <= (yPx - 90)) {
+                        y += 3
+                    }
+                    else if (y <= (yPx - 55)) {
+                        y += 4
+                    }
+                    else if (y <= (yPx + 5)) {
+                        y += 5
+                    }
+                }
+
+                puvPuvCopy.style.left = x + 'px';
+                puvPuvCopy.style.top = y + 'px';
+
+            }, 10)
+        })
+
+
+
+        //слайдер инпутов
+        const s1 = document.querySelector('.s1');
+        const s2 = document.querySelector('.s2');
+        const s3 = document.querySelector('.s3');
+        const ss1 = document.querySelector('.ss1');
+        const ss2 = document.querySelector('.ss2');
+        const ss3 = document.querySelector('.ss3');
+
+        s1.addEventListener('click', () => {
+            numForm = 1;
+
+            ss1.classList.add('openS')
+            ss2.classList.remove('openS')
+            ss3.classList.remove('openS')
+
+            nameForm.classList.add('openForm')
+            phoneForm.classList.remove('openForm')
+            emailForm.classList.remove('openForm')
+        })
+        s2.addEventListener('click', () => {
+            numForm = 2;
+
+            ss1.classList.remove('openS')
+            ss2.classList.add('openS')
+            ss3.classList.remove('openS')
+
+            nameForm.classList.remove('openForm')
+            phoneForm.classList.add('openForm')
+            emailForm.classList.remove('openForm')
+        })
+        s3.addEventListener('click', () => {
+            numForm = 3;
+
+            ss1.classList.remove('openS')
+            ss2.classList.remove('openS')
+            ss3.classList.add('openS')
+
+            nameForm.classList.remove('openForm')
+            phoneForm.classList.remove('openForm')
+            emailForm.classList.add('openForm')
+        })
+
+
+
+        //валидация формы
+        function checkForm() {
+
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', function (event) {
+                let flag = true;
+                event.preventDefault(); // Предотвращаем отправку формы
+
+                // Сбрасываем сообщения об ошибках
+                document.querySelector('.nameError').textContent = '';
+                document.querySelector('.phoneError').textContent = '';
+                document.querySelector('.emailError').textContent = '';
+
+                // Получаем значения полей
+                const name = document.querySelector('#name').value.trim();
+                const phone = document.querySelector('#phone').value.trim();
+                const email = document.querySelector('#email').value.trim();
+
+                // Валидация имени
+                const nameRegex = /^[a-zA-Zа-яА-ЯёЁ\s-]+$/; // Разрешает буквы, пробелы и дефисы
+                if (!nameRegex.test(name)) {
+                    flag = false;
+                    document.querySelector('.nameError').textContent = 'Введите корректное ИМЯ, пожалуйста.';
+                }
+
+                // Валидация телефона (пример для формата: +12345678901 или 1234567890)
+                const phoneRegex = /^\+?\d{10,15}$/; // Разрешает 10-15 цифр с возможным знаком +
+                if (!phoneRegex.test(phone)) {
+                    flag = false;
+                    document.querySelector('.phoneError').textContent = 'Введите корректный номер ТЕЛЕФОНА, пожалуйста.';
+                }
+
+                // Валидация электронной почты
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Простой паттерн для почты
+                if (!emailRegex.test(email)) {
+                    flag = false;
+                    document.querySelector('.emailError').textContent = 'Введите корректную электронную ПОЧТУ, пожалуйста.';
+                }
+
+                // Если все поля валидны, можно отправить форму (например, на сервер)
+                if (flag) {
+                    alert('Форма успешно отправлена!  Мы в ближайшее время свяжемся с вами)');
+                    setTimeout(() => { }, 1000)
+                    nameForm.value = '';
+                    phoneForm.value = '';
+                    emailForm.value = '';
+                    // Здесь можно добавить код для отправки формы, если необходимо
+                }
+            });
+        }
+        checkForm()
+
+
+
+        //корзина
+        const k3 = document.querySelector('.i3');
+        const kerror = document.querySelector('.kerror');
+        let k3Down = true;
+
+        k3.addEventListener('click', () => {
+            if (k3Down) {
+                k3Down = false;
+                kerror.classList.add('kerrorActive');
+                setTimeout(function () {
+                    kerror.classList.remove('kerrorActive');
+                    setTimeout(function () {
+                        k3Down = true
+                    }, 500)
+                }, 2300)
+
+            }
+        });
+
+
+
+        //бургер
+        const burger = document.querySelector('.burger');
+        const menu = document.querySelector('.menu');
+
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        const iconPols = document.querySelector('.iconDes');
+        const mainFon = document.querySelector('.main-fon');
+        const navA = document.querySelectorAll('nav a');
+        const burgerMenu = document.querySelectorAll('.menu a');
+        let TemaKV = 0
+
+
+
+        //ползунок
+        iconPols.addEventListener('click', () => {
+            iconPols.classList.toggle('blackTema');
+            mainFon.classList.toggle('blackTema');
+            navA.forEach(element => {
+                element.classList.toggle('blackTema');
+            });
+            burgerMenu.forEach(element => {
+                element.classList.toggle('blackTema');
+            });
+        });
+
+
+
+        //парящий эффект
+        let goFunkc = false
+
+        function createProgflake() {
+
+            const progflake = document.createElement('div');
+            progflake.className = 'flake';
+
+            if (!goFunkc) {
+                clearInterval();
+                return;
+            }
+
+            progflake.style.color = '#4f4f4f';
+            progflake.style.zIndex = 55;
+
+            let iconockkaP = Math.floor(Math.random() * (7 - 1) + 1); // округление до целого Рандомный iconochka
+            switch (iconockkaP) {
+                case 1: {
+                    progflake.textContent = 'C++';
+                    break;
+                }
+                case 2: {
+                    progflake.textContent = 'C#';
+                    break;
+                }
+                case 3: {
+                    progflake.textContent = 'Python';
+                    break;
+                }
+                case 4: {
+                    progflake.textContent = 'Css';
+                    break;
+                }
+                case 5: {
+                    progflake.textContent = 'HTML';
+                    break;
+                }
+                case 6: {
+                    progflake.textContent = 'JS';
+                    break;
+                }
+                default:
+                    break;
+            }
+
+            progflake.style.left = Math.random() * window.innerWidth + 'px';
+            progflake.style.fontSize = Math.random() * (34 - 10) + 10 + 'px'; // Рандомный размер 
+            progflake.style.animationDuration = Math.random() * (5 - 3) + 3 + 's'; // Рандомная скорость падения
+            document.body.append(progflake);
+
+            setTimeout(() => {
+                progflake.remove();
+            }, parseFloat(progflake.style.animationDuration) * 1000);
+        }
+
+        setInterval(createProgflake, 60);
+
+
+
+        //ГитХаб
+        const winGitHub = document.querySelector('.winGitHub');
+        const gitHub = document.querySelector('.gitHub');
+        const gitHubImg = document.querySelector('.gitHub img');
+        const logGit = document.querySelector('.logGit');
+        const nameGit = document.querySelector('.nameGit');
+        const bioGit = document.querySelector('.bioGit');
+        const GKrest = document.querySelector('.GKrest');
+        const i2 = document.querySelector('.i2');
+        const zagruska = document.querySelector('.zagruska');
+
+        i2.addEventListener('click', () => {
+            fetch(('https://api.github.com/users/m1fka'))
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Сеть недоступна, статус: ' + response.status);
+                    }
+                    else {
+                        return response.json()
+                    }
+                })
+                .then(githubUser => {
+                    gitHubImg.src = githubUser.avatar_url;
+                    logGit.innerHTML = 'Login - ' + githubUser.login + ' (' + githubUser.id + ')';
+                    nameGit.innerHTML = 'Name - ' + githubUser.name;
+                    bioGit.innerHTML = 'Bio - ' + githubUser.bio;
+                    zagruska.classList.add('go');
+
+                    setTimeout(() => {
+                        goFunkc = true;
+                        zagruska.classList.remove('go');
+                        gitHub.classList.add('openG');
+                        winGitHub.classList.add('openG');
+                        i2.classList.add('openi2');
+                    }, 1500)
+                });
+            GKrest.addEventListener('click', () => {
+                goFunkc = false;
+                gitHub.classList.remove('openG');
+                winGitHub.classList.remove('openG');
+                i2.classList.remove('openi2');
+            })
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            const arm = document.querySelector('.hand');
+            const armRect = arm.getBoundingClientRect();
+
+            // Положение плеча
+            const shoulderX = armRect.left;
+            const shoulderY = armRect.top + armRect.height / 2;
+
+            // Вычисляем угол
+            const deltaX = e.clientX - shoulderX;
+            const deltaY = e.clientY - shoulderY;
+            const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI); // Преобразуем радианы в градусы
+
+            arm.style.transform = `rotate(${angle}deg)`;
+        });
+
+
+
+        //сетка
+        const grid = document.getElementById('grid');
+        const hexSize = 45;
+        const hexHeight = 70;
+
+        function createHexagon(x, y) {
+            const hex = document.createElement('div');
+            hex.classList.add('hex');
+            hex.style.left = `${x}px`;
+            hex.style.top = `${y}px`;
+            grid.appendChild(hex);
+        }
+
+        function generateGrid() {
+            for (let row = 0; row < window.innerHeight / hexHeight + 1; row++) {
+                for (let col = 0; col < window.innerWidth / hexSize + 1; col++) {
+                    const x = col * hexSize * 1.5;
+                    const y = row * hexHeight + (col % 2) * (hexHeight / 2);
+                    createHexagon(x, y);
+                }
+            }
+        }
+
+        generateGrid();
+
+
+
+        //рука
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            const hexagons = document.querySelectorAll('.hex');
+            hexagons.forEach(hex => {
+                const hexRect = hex.getBoundingClientRect();
+                const hexCenterX = hexRect.left + hexRect.width / 2;
+                const hexCenterY = hexRect.top + hexRect.height / 2;
+
+                const distance = Math.sqrt((hexCenterX - x) ** 2 + (hexCenterY - y) ** 2);
+                if (distance < 50) { // Радиус свечения
+                    hex.style.boxShadow = '0 0 6px rgba(200, 177, 255, 1)';
+                }
+                else if (distance < 80) { // Радиус свечения
+                    hex.style.boxShadow = '0 0 4px rgba(200, 177, 255, 0.6)';
+                }
+                else if (distance < 100) { // Радиус свечения
+                    hex.style.boxShadow = '0 0 4px rgba(200, 177, 255, 0.3)';
+                } else {
+                    hex.style.boxShadow = 'none';
+                }
+
+            });
+        });
+
+
+
+
+        document.addEventListener('mouseleave', () => {
+            grid.style.opacity = 0;
+        })
+
+        iconPols.addEventListener('click', () => {
+            grid.style.opacity = 0;
+
+            if (TemaKV == 0) {
+                TemaKV = 1;
+            }
+            else if (TemaKV == 1) {
+                TemaKV = 0;
+            }
+            if (TemaKV == 1) {
+                grid.style.opacity = 1;
+                document.addEventListener('mouseenter', () => {
+                    if (TemaKV == 1) {
+                        grid.style.opacity = 1;
+                    }
+                })
+            }
+        })
+
+
+
+        const levoPols = document.querySelector('.levo-pols');
+        const pravoPols = document.querySelector('.pravo-pols');
+
+        iconPols.addEventListener('click', () => {
+            levoPols.classList.toggle('open');
+            pravoPols.classList.toggle('open');
+        })
+
+    </script>
+</body>
+
+</html>

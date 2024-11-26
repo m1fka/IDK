@@ -1,0 +1,463 @@
+main .container {
+    padding-top: 50px;
+}
+
+.main-fon img {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    top: 150px;
+    left: 0%;
+}
+
+.name-fon {
+    color: aliceblue;
+    padding-bottom: 100px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.gogol {
+    padding-top: 30px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    animation: openn 0.8s;
+}
+
+.gogolPols {
+    padding-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    padding: auto;
+    max-width: 920px;
+    animation: openn 0.8s;
+}
+
+.activeAb {
+    display: block;
+}
+
+.activeAbp {
+    display: block;
+}
+
+.about {
+    display: flex;
+}
+
+.inputS input {
+    margin: auto;
+    text-align: center;
+    width: 400px;
+    background-color: var(--main-color);
+}
+
+.keyBoard {
+    position: relative;
+    top: -24px;
+    left: 362px;
+}
+
+.A {
+    font-size: 130px;
+    color: rgb(93, 93, 224);
+}
+
+.about .d .l {
+    font-size: 130px;
+    letter-spacing: -28px;
+    color: rgb(242, 62, 62);
+}
+
+.about .d .b {
+    font-size: 130px;
+    color: rgb(242, 62, 62);
+}
+
+.about .d {
+    display: flex;
+    font-size: 130px;
+    color: rgb(242, 62, 62);
+    z-index: 10;
+}
+
+.nitka {
+    display: none;
+    position: fixed;
+    margin-left: 114px;
+    margin-top: -55px;
+}
+
+.openNit {
+    display: block;
+}
+
+.nitka img {
+    animation: openNit 0.4s linear;
+}
+
+@keyframes openNit {
+    0% {
+        width: 53px;
+        height: 0px;
+    }
+
+    100% {
+        width: 53px;
+        height: 131px;
+    }
+}
+
+.anim {
+    animation: anim 2s ease-in;
+}
+
+@keyframes anim {
+    100% {
+        transform: translate(120px, -1000px);
+    }
+}
+
+.about .o {
+    font-size: 130px;
+    color: rgb(255, 210, 86);
+}
+
+.about .u {
+    font-size: 130px;
+    color: rgb(93, 93, 224);
+}
+
+.about .t {
+    font-size: 130px;
+    color: rgb(0, 163, 0);
+}
+
+
+
+.cat {
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgb(226, 195, 255);
+    border-radius: 10px;
+    background-color: rgb(223, 209, 255);
+    text-align: center;
+    padding-top: 24px;
+    color: white;
+    animation: catP infinite 2s;
+    box-shadow: 0 0 15px 9px rgb(218, 218, 218);
+
+}
+
+.cat:hover {
+    background-color: rgb(234, 227, 255);
+}
+
+@keyframes catP {
+    0% {}
+
+    35% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.nonocat {
+    display: block;
+}
+
+.nocat {
+    display: flex;
+}
+
+.textVar {
+    position: relative;
+    left: 280px;
+    width: 380px;
+    display: flex;
+    color: white;
+}
+
+.textVar1 {
+    height: 35px;
+    width: 50%;
+    border-radius: 0px 0px 25px 25px;
+    background-color: rgb(234, 227, 255);
+    text-align: center;
+}
+
+.textVar2 {
+    height: 35px;
+    width: 50%;
+    border-radius: 0px 0px 25px 25px;
+    background-color: rgb(233, 209, 255);
+    background-color: rgb(234, 227, 255);
+    text-align: center;
+}
+
+.textVar1:hover {
+    background-color: rgb(223, 209, 255);
+}
+
+.textVar2:hover {
+    background-color: rgb(223, 209, 255);
+}
+
+.how {
+    background-color: rgb(223, 209, 255);
+    box-shadow: 0 9px 15px 0px rgb(218, 218, 218);
+}
+
+.textAb {
+    width: 650px;
+    height: 264px;
+    border: 8px solid rgb(223, 209, 255);
+    border-radius: 10px;
+    background-color: fff;
+    box-shadow: 0 0 15px 9px rgb(218, 218, 218);
+}
+
+.paint {
+    margin-top: 90px;
+    margin-left: 20px;
+    width: 120px;
+    height: 160px;
+    border: 6px solid rgb(223, 213, 255);
+    border-radius: 10px;
+    background-color: rgb(243, 242, 255);
+    box-shadow: 0 0 15px 9px rgb(218, 218, 218);
+}
+
+.textAb1 img {
+    max-width: 400px;
+}
+
+.textAb1 {
+    display: none;
+}
+
+.textAb2 {
+    display: none;
+    color: black;
+}
+
+.textAb2 .textAb2s {
+    min-width: 400px;
+    padding: 20px;
+    text-align: center;
+}
+
+.textAb2 ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: space-around;
+    margin-top: 30px;
+    opacity: 0.9;
+    text-align: center;
+
+}
+
+.textAb2s p:nth-child(1) {
+    font-size: 18px;
+}
+
+.textAb2 ul li:nth-child(1) {
+    width: 70px;
+}
+
+.textAb2 ul li:nth-child(1) p:nth-child(3) {
+    padding-top: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.textAb2 ul li:nth-child(3) p:nth-child(3) {
+    padding-top: 4px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+.enter {
+    display: flex;
+}
+
+.l-bort {
+    height: 260px;
+    border: 2px solid rgb(223, 209, 255);
+    background-color: rgb(223, 209, 255);
+
+    margin-top: -4px;
+}
+
+.r-bort {
+    height: 260px;
+    border: 2px solid rgb(223, 209, 255);
+    background-color: rgb(223, 209, 255);
+
+    margin-top: -4px;
+}
+
+.buCat img {
+    position: absolute;
+    opacity: 0.8;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    z-index: 1000;
+}
+
+.buCat {
+    display: none;
+}
+
+.bu {
+    display: block;
+}
+
+
+
+.ono img {
+    position: absolute;
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    z-index: 1000;
+}
+
+.ono {
+    display: none;
+}
+
+.onoBu {
+    display: block;
+    animation: onoBu 0.5s;
+}
+
+@keyframes onoBu {
+    0% {
+        opacity: 0.2;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.2;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.2;
+    }
+
+    70% {
+        opacity: 0;
+    }
+
+    80% {
+        opacity: 0.2;
+    }
+
+    90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+}
+
+
+
+@media screen and (max-width: 1366px) {
+    .textVar {
+        left: 240px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .l-bort {
+        padding: 2.5vw;
+    }
+
+    .r-bort {
+        padding: 2.5vw;
+    }
+
+    .cat {
+        margin-left: 80px;
+    }
+
+    .nocat {
+        margin-left: 160px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cat {
+        margin-top: 20px;
+        width: 60px;
+        height: 60px;
+        padding-top: 14px;
+    }
+
+    .nocat {
+        margin-left: 60px;
+    }
+
+    .textVar {
+        left: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .gogolPols {
+        margin-left: -3vw;
+    }
+
+    .nocat {
+        margin-left: 70px;
+    }
+
+    .textVar {
+        left: 90px;
+    }
+}
+
+@keyframes openn {
+    0% {
+        transform: translatey(-60px);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translatey(0px);
+    }
+}
