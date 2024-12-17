@@ -1,0 +1,64 @@
+.main-fon img {
+    position: absolute;
+    z-index: -10;
+    width: 100%;
+    height: 670px;
+    /* картинка заполняет все выделенное пространство */
+    object-fit: cover;
+    top: 150px;
+    left: 0%;
+    /* фильтр на картинку */
+    filter: blur(2px);
+}
+
+main .container .name {
+    line-height: 0.9;
+    font-size: 60px;
+    margin-left: 15vw;
+    margin-right: auto;
+    margin-top: 150px;
+    opacity: 0.8;
+    text-align: left;
+    animation: nameOpas 3.5s;
+}
+@keyframes nameOpas {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.8;
+    }
+}
+
+footer {
+    margin-top: -150px;
+}
+
+
+
+
+#grid {
+    opacity: 1;
+    position: fixed;
+    left: -2px;
+    top: 143px;
+    width: 100vw;
+    height: 100vw;
+    z-index: -10;
+}
+
+.hex {
+    opacity: 1;
+    position: absolute;
+    width: 171px;
+    height: 171px;
+    border: 2px rgba(255, 255, 255, 0.3) solid;
+    box-shadow: 0 0 20px 2px rgba(255, 253, 253, 0.3);
+    transition: box-shadow 0.1s;
+    background-color: rgba(224, 224, 224, 0.2);
+}
